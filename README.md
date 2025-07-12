@@ -153,3 +153,5 @@ For questions or support, please reach out to the development team.
 ---
 
 **SkillLoop** - Swap Skills, Grow Together 
+
+end
