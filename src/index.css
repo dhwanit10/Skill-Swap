@@ -6,43 +6,79 @@
   html {
     scroll-behavior: smooth;
   }
-  
   body {
     font-family: 'Inter', system-ui, sans-serif;
     @apply bg-dark-900 text-gray-100;
   }
+  .font-sketch {
+    font-family: 'Caveat', 'Indie Flower', cursive, sans-serif;
+    letter-spacing: 0.5px;
+  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  .sketchy-outline {
+    border: 2.5px solid #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0 2px #fff, 0 2px 8px 0 rgba(0,0,0,0.05);
   }
-  
-  .btn-secondary {
-    @apply bg-dark-800 hover:bg-dark-700 text-secondary-400 font-semibold py-3 px-6 rounded-lg border-2 border-secondary-500 transition-colors duration-200;
+  .sketchy-input {
+    @apply bg-transparent text-white px-4 py-2 font-sketch;
+    border: 2px solid #fff;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: box-shadow 0.2s;
   }
-  
-  .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+  .sketchy-btn {
+    @apply font-sketch px-6 py-2 text-lg;
+    background: #0e3c47;
+    color: #fff;
+    border: 2.5px solid #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 2px #fff;
+    transition: background 0.2s, color 0.2s;
   }
-  
-  .container-custom {
-    @apply max-w-7xl mx-auto;
+  .sketchy-btn:hover {
+    background: #e02642;
+    color: #fff;
   }
-
-  .card-dark {
-    @apply bg-dark-800 border border-dark-700 rounded-xl shadow-lg;
+  .sketchy-pill {
+    @apply font-sketch px-4 py-1 text-base;
+    background: #222;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 9999px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+    display: inline-block;
   }
-
-  .text-primary {
-    @apply text-secondary-400;
+  .sketchy-card {
+    @apply bg-transparent p-6 mb-6;
+    border: 2.5px solid #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0 2px #fff, 0 2px 8px 0 rgba(0,0,0,0.05);
   }
-
-  .bg-gradient-dark {
-    @apply bg-gradient-to-br from-dark-800 to-dark-900;
+  .sketchy-avatar {
+    width: 90px;
+    height: 90px;
+    border: 2.5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background: #111;
+    color: #fff;
+    margin-right: 1.5rem;
   }
-
-  .bg-gradient-primary {
-    @apply bg-gradient-to-r from-secondary-500 to-secondary-600;
+  .sketchy-label {
+    @apply font-sketch text-base;
+    color: #00e6b8;
+    margin-right: 0.5rem;
+  }
+  .sketchy-label-wanted {
+    @apply font-sketch text-base;
+    color: #3ec6ff;
+    margin-right: 0.5rem;
   }
 } 
